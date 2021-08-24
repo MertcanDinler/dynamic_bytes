@@ -27,7 +27,7 @@ class DynamicBytes {
     }
   }
 
-  DynamicBytes([int initialBufferSize = 8]) {
+  DynamicBytes([int initialBufferSize = 64]) {
     _buffer = Uint8List(initialBufferSize);
   }
 
