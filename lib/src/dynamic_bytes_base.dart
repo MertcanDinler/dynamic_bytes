@@ -31,10 +31,6 @@ class DynamicBytes {
     _buffer = Uint8List(initialBufferSize);
   }
 
-  ByteBuffer get buffer => _byteData.buffer;
-
-  int get elementSizeInBytes => _byteData.elementSizeInBytes;
-
   double getFloat32(int byteOffset, [Endian endian = Endian.little]) {
     return _get(_byteData.getFloat32, byteOffset, endian);
   }
@@ -74,10 +70,6 @@ class DynamicBytes {
   int getUint8(int byteOffset) {
     return _get(_byteData.getUint8, byteOffset);
   }
-
-  int get lengthInBytes => _buffer.lengthInBytes;
-
-  int get offsetInBytes => _buffer.offsetInBytes;
 
   void setFloat32(int byteOffset, double value,
       [Endian endian = Endian.little]) {
